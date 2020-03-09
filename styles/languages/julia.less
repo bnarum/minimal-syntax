@@ -1,35 +1,38 @@
 .syntax--julia{
-	.syntax--operator{
-		color: ;
+	&.syntax--keyword.syntax--operator{
+		color: @text;
 	}
-	.syntax--array{
-		color: ;
+	&.syntax--array{
+		color: @text;
 	}
-	.syntax--string{
-		color: ;
+	&.syntax--string{
+		color: @content;
 	}
-	.syntax--bracket{
-		color: ;
+	&.syntax--bracket{
+		color: @text;
 	}
-	.syntax--function_decl{
-		color: ;
+	&.syntax--function_decl{
+		color: @syntax;
 	}
-	.syntax--function_call{
-		color: ;
+	&.syntax--function_call{
+		color: @syntax;
 	}
-	.syntax--keyword{
-		color: ;
+	&.syntax--keyword{
+		color: lighten(@syntax, 15%);
 	}
-	.syntax--number{
-		color: ;
+	&.syntax--constant{
+		color: @text;
+		&.syntax--numeric{
+			font-weight: normal;
+		}
 	}
-	.syntax--comment{
-		color: ;
+	&.syntax--comment{
+		color: @comment;
 	}
-	.syntax--type_decl{
-		color: ;
+	&.syntax--type{
+		color: @constant;
 	}
-	.syntax--symbol{
-		color: ;
+	&.syntax--symbol{
+		color: mix(@constant, @syntax);
 	}
 }
