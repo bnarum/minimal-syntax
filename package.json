@@ -34,5 +34,10 @@
   "license": "MIT",
   "engines": {
     "atom": ">=1.13.0 <2.0.0"
+  },
+  "apmInstallSource": {
+    "type": "git",
+    "source": "git@github.com:bnarum/minimal-syntax.git",
+    "sha": "c34e1ffdb4977a62ca6fca80fb01112eb6e1c3e2"
   }
 }
