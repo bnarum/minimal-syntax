@@ -1,35 +1,71 @@
 .syntax--julia{
-	.syntax--operator{
-		color: ;
+	&.keyword{
+		&.operator{
+			color: @text;
+		}
+		&.control{
+			&.import, &.using, &.export
+			{
+				color: @syntax-alt;
+			}
+			&.end{
+				opacity: 0.5;
+			}
+		}
+		&.storage{
+			color: @constant-alt;
+		}
+		&.other{ //
+			color: @syntax;
+		}
 	}
-	.syntax--array{
-		color: ;
+
+	&.string{
+		color: @content;
 	}
-	.syntax--string{
-		color: ;
+
+	&.bracket{
+		color: @text;
 	}
-	.syntax--bracket{
-		color: ;
+
+	&.function_decl{
+		color: @syntax;
+		font-style: bold;
 	}
-	.syntax--function_decl{
-		color: ;
+
+	&.function_call{
+		color: @syntax;
 	}
-	.syntax--function_call{
-		color: ;
+
+	&.constant{
+		&.numeric{
+			font-weight: normal;
+			color: @text;
+		}
+		&.symbol{
+			font-weight: normal;
+			color: mix(@constant, @syntax);
+		}
+		&.language{
+			font-weight: bold;
+		}
 	}
-	.syntax--keyword{
-		color: ;
+
+	&.comment{
+		color: @comment;
 	}
-	.syntax--number{
-		color: ;
+
+	&.type{
+		color: @syntax;
+		opacity: 0.5;
 	}
-	.syntax--comment{
-		color: ;
+
+	&.macro{
+		font-style: italic;
+		opacity: 0.75;
 	}
-	.syntax--type_decl{
-		color: ;
-	}
-	.syntax--symbol{
-		color: ;
+
+	&.interpolation{
+		color: @constant;
 	}
 }
